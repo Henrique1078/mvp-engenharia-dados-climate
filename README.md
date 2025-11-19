@@ -29,5 +29,23 @@ O projeto busca responder às seguintes questões principais:
 * **Armazenamento:** DBFS (Databricks File System)
 * **Versionamento:** Git & GitHub
 
+## 📚 Catálogo de Dados (Data Dictionary)
+
+A tabela final na camada Prata (`silver_climate_data`) possui 1.200 registros e o seguinte esquema:
+
+| Coluna | Tipo | Descrição | Domínio / Range (Min-Max) |
+| :--- | :--- | :--- | :--- |
+| **year** | `integer` | Ano de registro da métrica. | 2020 a 2025 |
+| **continent** | `string` | Continente onde o país está localizado. | Africa, Asia, Europe, North America, Oceania, South America |
+| **country** | `string` | Nome do país analisado. | Texto livre (ex: Argentina a USA) |
+| **avg_temperature_celsius** | `double` | Temperatura média anual em graus Celsius. | 10.0°C a 35.0°C |
+| **co2_emissions_mt** | `double` | Emissão anual de CO₂ em milhões de toneladas. | 103.32 Mt a 999.55 Mt |
+| **sea_level_rise_mm** | `double` | Aumento estimado do nível do mar em milímetros. | 1.0 mm a 5.0 mm |
+| **climate_risk_index** | `integer` | Índice de vulnerabilidade climática (quanto maior, maior o risco). | 20 a 90 |
+
+
+
+
+
 ---
 *Desenvolvido por Henrique.*
