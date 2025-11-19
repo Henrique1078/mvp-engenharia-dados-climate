@@ -22,6 +22,7 @@ O projeto busca responder às seguintes questões principais:
 **Fonte:** Kaggle - Global Climate Change Data (2020–2025)
 **Formato:** CSV
 **Descrição:** Dados contendo temperatura média, emissões de CO2, aumento do nível do mar e índice de risco climático por país e ano.
+**Disponível em:** https://www.kaggle.com/datasets/shahzadi786/global-climate-change-data-20202025?resource=download
 
 ## Tecnologias Utilizadas
 * **Linguagem:** Python (PySpark & Pandas)
