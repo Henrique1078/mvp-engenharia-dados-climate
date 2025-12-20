@@ -45,6 +45,56 @@ A tabela final na camada Prata (`silver_climate_data`) possui 1.200 registros e 
 | **sea_level_rise_mm** | `double` | Aumento estimado do nível do mar em milímetros. | 1.0 mm a 5.0 mm |
 | **climate_risk_index** | `integer` | Índice de vulnerabilidade climática (quanto maior, maior o risco). | 20 a 90 |
 
+
+### Tabela de Tendência Temporal: Temperatura Média por Ano e Continente (Pergunta 1)
+
+Esta tabela agrega a temperatura média por ano e continente, derivada da camada Silver.
+
+| Coluna               | Tipo      | Descrição                                                  | Domínio / Range (Min-Max)       |
+|----------------------|-----------|------------------------------------------------------------|---------------------------------|
+| **Ano**              | `integer` | Ano da agregação temporal.                                 | 2020 a 2025                     |
+| **Continente**       | `string`  | Nome do continente analisado.                              | Africa, Asia, Europe, North America, Oceania, South America |
+| **Temp. Média (°C)** | `double`  | Temperatura média anual agregada para o continente no ano específico. | 19.06°C a 26.70°C               |
+
+
+### Tabela de Correlações Críticas: Coeficientes de Pearson entre Métricas Climáticas (Pergunta 2)
+
+Esta tabela apresenta os coeficientes de correlação de Pearson entre métricas climáticas, calculados a partir da camada Silver.
+
+| Coluna                              | Tipo      | Descrição                                                  | Domínio / Range (Min-Max)       |
+|-------------------------------------|-----------|------------------------------------------------------------|---------------------------------|
+| **Par de Métricas**                 | `string`  | Descrição do par de variáveis correlacionadas (ex: CO₂ vs Temperatura). | Texto descritivo (pares específicos de métricas climáticas) |
+| **Coeficiente de Correlação (Pearson)** | `double` | Valor do coeficiente de correlação linear.                | -1.0 a 1.0                      |
+| **Interpretação Estatística**       | `string`  | Classificação qualitativa da correlação.                   | Texto categórico (ex: Inexistente/Nula) |
+
+
+### Tabela de Análise de Vulnerabilidade: Top 5 Países por Climate Risk Index (Pergunta 3)
+
+Esta tabela lista os Top 5 países por índice de risco, com comparações à média global, derivada da camada Silver.
+
+| Coluna                     | Tipo      | Descrição                                                  | Domínio / Range (Min-Max)       |
+|----------------------------|-----------|------------------------------------------------------------|---------------------------------|
+| **País**                   | `string`  | Nome do país ranqueado.                                    | Texto livre (ex: Italy, Indonesia) |
+| **Risco Médio (Index)**    | `double`  | Média do índice de risco climático para o país.            | 57.81 a 63.49                   |
+| **Temp. País (°C)**        | `double`  | Temperatura média anual do país.                            | 20.94°C a 22.53°C               |
+| **Diferença da Global**    | `double`  | Diferença entre a temperatura do país e a média global (22.42°C). | -1.47°C a +0.12°C               |
+| **Nível do Mar (mm)**      | `double`  | Aumento médio do nível do mar para o país.                 | 2.74 mm a 3.41 mm               |
+| **Status Nível do Mar**    | `string`  | Classificação em relação à média global (3.03 mm).          | Texto categórico (ex: Abaixo da Média, Acima da Média) |
+
+
+### Tabela de Impacto Regional: Ranking de Continentes por Emissões de CO₂ e Temperatura (Pergunta 4)
+
+Esta tabela ranqueia continentes por emissões médias de CO₂ e compara com temperaturas, agregada da camada Silver.
+
+| Coluna                        | Tipo      | Descrição                                                  | Domínio / Range (Min-Max)       |
+|-------------------------------|-----------|------------------------------------------------------------|---------------------------------|
+| **Ranking**                   | `string`  | Posição no ranking de emissões (ex: 1º).                   | Texto ordinal (1º a 6º)         |
+| **Continente**                | `string`  | Nome do continente ranqueado.                              | Africa, Asia, Europe, North America, Oceania, South America |
+| **Média Emissões CO₂ (Mt)**   | `double`  | Média anual de emissões de CO₂ para o continente.          | 530.62 Mt a 583.90 Mt           |
+| **Média Temperatura (°C)**    | `double`  | Temperatura média anual para o continente.                 | 21.86°C a 22.82°C               |
+
+
+
 ## 5. Solução do Problema e Análises
 
 ### Pergunta 1: Tendência Temporal
